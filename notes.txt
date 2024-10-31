@@ -1,0 +1,24 @@
+Cmake: makes makefile(or any other equivalent build files in other environments) which in turn work with compiler to build the code.
+This makes cmake useful for building crossplatform stuff
+
+cmakelist in root: basic setup and dependencies management
+cmakelist in src folder: list of source files and executables
+separate lists lets us make multiple executables and libraries
+
+vcpkg: open source packet manager
+
+raylib: open source games dev library
+
+in root: ./vcpkg/vcpkg install raylib
+to install raylib using vcpkg, but required a newer version of cmake
+installed new cmake using tar file then,
+./configure
+make
+sudo make install
+
+new cmake requires OpenSSL, sudo apt-get install libssl-dev
+
+run cmake: mkdir build;cd build; cmake ..
+then run make
+compile: gcc pong/CMakeFiles/pong.dir/src/main.c.o -o main
+run: ./main
